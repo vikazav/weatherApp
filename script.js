@@ -79,7 +79,8 @@ let apiKey ="428a806b1ea72671015f9a8da5f82916";
 }
 searchCity("Kyiv");
 
-searchForm.addEventListener("submit",() => {
+searchForm.addEventListener("submit",(e) => {
+  e.preventDefault();
   let inputCityValue = inputCity.value;
   cityNow.innerHTML = inputCityValue;
   searchCity(inputCityValue);
@@ -94,8 +95,8 @@ function handlePosition(position) {
   .then (showTemperature);
 }
 
-currentBtn.addEventListener('click',()=> {
-  
+currentBtn.addEventListener('click',(e)=> {
+  e.preventDefault();
   navigator.geolocation.getCurrentPosition(handlePosition)
 })
 
