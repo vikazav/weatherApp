@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Weather Wireframe</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/d4c7ec442d.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+<body>
+   <div class="container p-4 wrapper">
+    <form class="search-form">
+      <div class="row">
+        
+            <div class="col-6 p-4">
+               <input type="text" class="input input-city" placeholder="Enter a city">
+             </div>
+             <div class="col-6 p-4">
+               <button type="submit" class="btn-search">Search</button>
+               <button type="button" class="btn-search current">Current</button>
+             </div>
+      </div>
+    </form>
+          <ul class="nav mb-4">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Kharkiv</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lviv</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Odesa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Dnipro</a>
+            </li>
+          </ul>
+          
+          <div class="row p-4 d-flex mb-5">
+            <div class="col-md-6 text-center p-4 city-block">
+              <div class="col-md-12">
+               <h1 class="mb-5 city"></h1>
+                  <p class="fs-4 time-now"></p>
+                  <p class="fs-4 day-now"></p>
+                </div>
+            </div>
+            <div class="col-md-6 p-4 ps-5 temp-block">
+               <div class="row">
+                  <i class="fa-solid fa-cloud"></i>
+                  </div>
+                  <div class="text-center">
+                    <span class="temp"></span>
+                    <a href="#" class ="temp-icon temp-cels">&#176;C   </a> <span class="oblique">   | </span><a href="#" class ="temp-icon temp-fareng">&#176;F </a>
+                    </div>
+                  <div class="row ms-1 description text-end"></div>
+                  <p >Humidity: <span class="humidity"></span>%</p>
+                  <p >Wind: <span class="wind"></span> m/s</p>
+                  </div>
+              
+               </div>
+              
+          <div class="row pt-3 text-center">
+            <div class="col item d-flex justify-content-center">
+               <div class="card" style="width: 5rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Sun</h5>
+                    <i class="fa-solid fa-sun icon"></i>
+                    <p class="card-text">24  <sup><small>&#176;C</small></sup></p>
+                  </div>
+                </div>
+            </div>
+            <div class="col item d-flex justify-content-center">
+               <div class="card" style="width: 5rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Mon</h5>
+                    <i class="fa-solid fa-cloud-sun icon"></i>
+                    <p class="card-text">24  <sup><small>&#176;C</small></sup></p>
+                  </div>
+                </div>
+            </div>
+            <div class="col item d-flex justify-content-center">
+               <div class="card" style="width: 5rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Tue</h5>
+                    <i class="fa-solid fa-cloud-sun-rain icon"></i>
+                    <p class="card-text">20  <sup><small>&#176;C</small></sup></p>
+                  </div>
+                </div>
+            </div>
+            <div class="col item d-flex justify-content-center">
+               <div class="card" style="width: 5rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Wen</h5>
+                    <i class="fa-solid fa-cloud-bolt icon"></i>
+                    <p class="card-text">22  <sup><small>&#176;C</small></sup></p>
+                  </div>
+                </div>
+            </div>
+            <div class="col item d-flex justify-content-center">
+               <div class="card" style="width: 5rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Thu</h5>
+                    <i class="fa-solid fa-sun icon"></i>
+                    <p class="card-text">24  <sup><small>&#176;C</small></sup></p>
+                  </div>
+                </div>
+            </div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

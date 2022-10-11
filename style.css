@@ -1,0 +1,74 @@
+.wrapper {
+   margin: 0 auto;
+   background-color: #FFFCF6;
+}
+.input {
+   border: 2px solid #4ea6a0;
+   padding: 10px;
+   width: 100%;
+   border-radius: 5px;
+   font-size: 20px;
+}
+.btn-search {
+   background-color: #3084eb;
+   color: #fff;
+   border: none;
+   padding: 10px;
+   width: 30%;
+   border-radius: 5px;
+   font-size: 20px;
+}
+.btn-search:hover {
+   background-color: #175baf;
+}
+.current {
+   background-color: #2a8a0d;
+}
+.current:hover {
+   background-color: #1b5709;
+}
+.fa-cloud, .fa-cloud-rain {
+   color: #3084eb;
+   font-size: 60px;
+}
+.fa-sun {
+   color: rgb(255, 210, 10);
+   font-size: 60px;
+}
+.icon {
+  color:yellow;
+}
+.card-body {
+   background-color: #88D1CC;
+}
+.city {
+   color:#3084eb;
+   font-size: 56px;
+}
+.description {
+   color:#3084eb;
+   font-size: 50px;
+}
+.temp {
+   color:#2a948d;
+   font-size: 60px;
+}
+
+.city-block {
+   border: 2px solid #4ea6a0;
+   border-radius: 5px;
+}
+.item {
+   align-items: center;
+}
+.oblique {
+   font-size: 20px;
+}
+.temp-icon, .oblique {
+   text-decoration:none;
+  vertical-align: super;
+  color:#470bd15e;
+}
+.temp-icon:hover {
+   text-decoration: underline;
+}
