@@ -4,7 +4,6 @@ let minutes = now.getMinutes();
 let timeNow = document.querySelector('.time-now');
 let dayNow = document.querySelector('.day-now');
 
-// let searchBtn = document.querySelector(".btn-search");
 let currentBtn = document.querySelector(".current");
 let searchForm = document.querySelector(".search-form");
 let cityNow = document.querySelector('.city'); 
@@ -78,6 +77,7 @@ let apiKey ="428a806b1ea72671015f9a8da5f82916";
   axios.get(`${apiUrl}q=${city}&appid=${apiKey}&units=metric`)
   .then (showTemperature);
 }
+searchCity("Kyiv");
 
 searchForm.addEventListener("submit",() => {
   let inputCityValue = inputCity.value;
@@ -99,7 +99,7 @@ currentBtn.addEventListener('click',()=> {
   navigator.geolocation.getCurrentPosition(handlePosition)
 })
 
-searchCity("Kyiv");
+
 
 
 
