@@ -17,7 +17,7 @@ let tempIcon = document.querySelectorAll(".temp-icon");
 let iconCels = document.querySelector(".temp-cels");
 let iconFareng = document.querySelector(".temp-fareng");
 
-let cloudIcon = document.querySelector(".fa-solid");
+let icon = document.querySelector(".icon");
 
 
 if(minutes <10) {
@@ -37,22 +37,15 @@ let inputCity = document.querySelector('.input-city');
 let description = document.querySelector('.description');
 
 function showTemperature(response) {
+  console.log(response.data);
   let tempNow=Math.round(response.data.main.temp);
   let humidityNow = response.data.main.humidity;
   let windNow = Math.round(response.data.wind.speed);
   let descriptionNow= response.data.weather[0].main;
   description.innerHTML = descriptionNow;
-  cloudIcon.classList.remove("fa-sun");
-  cloudIcon.classList.remove("fa-cloud-rain");
-  cloudIcon.classList.add("fa-cloud");
-  if (descriptionNow === "Clear") {
-    cloudIcon.classList.add("fa-sun");
-    cloudIcon.classList.remove("fa-cloud");
-  } else if (descriptionNow === "Rain") {
-    cloudIcon.classList.add("fa-cloud-rain");
-    cloudIcon.classList.remove("fa-cloud");
-  }
-  
+  console.log(response.data.weather[0].icon);
+  icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`);
+  console.log(icon);
   let currentCity = response.data.name;
   cityNow.innerHTML = currentCity;
   temp.innerHTML =tempNow;
@@ -62,9 +55,14 @@ function showTemperature(response) {
     icon.addEventListener('click',(e) => {
       if (e.target === iconCels) {
         temp.innerHTML = tempNow;
+        iconCels.classList.add("active");
+        iconFareng.classList.remove("active");
       }
       if (e.target ===iconFareng) {
         temp.innerHTML = Math.round(tempNow*1.8+32);
+        iconFareng.classList.add("active");
+        iconCels.classList.remove("active");
+
       }
     })
     })

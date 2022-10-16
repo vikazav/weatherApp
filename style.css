@@ -1,42 +1,30 @@
 .wrapper {
    margin: 0 auto;
+   max-width: 700px;
+   
+}
+.app-weather {
+   border: 1px solid #dadde1;
+   border-radius:5px;
    background-color: #FFFCF6;
 }
-.input {
-   border: 2px solid #4ea6a0;
-   padding: 10px;
-   width: 100%;
-   border-radius: 5px;
-   font-size: 20px;
-}
+
 .btn-search {
-   background-color: #3084eb;
-   color: #fff;
-   border: none;
-   padding: 10px;
-   width: 30%;
-   border-radius: 5px;
-   font-size: 20px;
+   width: 45%;
 }
 .btn-search:hover {
    background-color: #175baf;
 }
 .current {
-   background-color: #2a8a0d;
+   width: 45%;
 }
 .current:hover {
    background-color: #1b5709;
 }
-.fa-cloud, .fa-cloud-rain {
-   color: #3084eb;
-   font-size: 60px;
-}
-.fa-sun {
-   color: rgb(255, 210, 10);
-   font-size: 60px;
-}
-.icon {
-  color:yellow;
+
+.icon-block img {
+  width: 70%;
+  
 }
 .card-body {
    background-color: #88D1CC;
@@ -67,8 +55,16 @@
 .temp-icon, .oblique {
    text-decoration:none;
   vertical-align: super;
-  color:#470bd15e;
+ 
 }
 .temp-icon:hover {
    text-decoration: underline;
+}
+.active {
+   color:black;
+   
+}
+.active:hover {
+text-decoration: none;
+cursor:default;
 }
