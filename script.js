@@ -36,6 +36,28 @@ let wind =document.querySelector('.wind');
 let inputCity = document.querySelector('.input-city');
 let description = document.querySelector('.description');
 
+
+
+function showForecast() {
+  let forecastDays= ['Mon','Tue','Wen','Thu','Fri'];
+let forecast = document.querySelector(".forecast");
+
+  let cardContainer = `<div class = "row">`;
+  forecastDays.forEach((day) => {
+cardContainer = cardContainer + `<div class="col-2 item">
+<div class="card" style="width: 5rem;">
+   <div class="card-body">
+     <h5 class="card-title">${day}</h5>
+     <i class="fa-solid fa-sun card-icon"></i>
+     <p class="card-text">24  <sup><small>&#176;C</small></sup></p>
+   </div>
+ </div>
+</div>`
+  });
+  cardContainer = cardContainer+`</div>`;
+  forecast.innerHTML = cardContainer;
+}
+
 function showTemperature(response) {
   console.log(response.data);
   let tempNow=Math.round(response.data.main.temp);
@@ -98,6 +120,7 @@ currentBtn.addEventListener('click',(e)=> {
   navigator.geolocation.getCurrentPosition(handlePosition)
 })
 
+showForecast();
 
 
 
