@@ -22,9 +22,8 @@
    background-color: #1b5709;
 }
 
-.icon-block img {
-  width: 70%;
-  
+.min-temp {
+   opacity: .6;
 }
 .card-body {
    background-color: #88D1CC;
