@@ -51,10 +51,10 @@ let forecastElement = document.querySelector(".forecast");
   let forecastHtml = `<div class = "row">`;
 
   forecast.forEach((forecastDay, index) => {
-    if (index <6 ) {
+    if (index <5 ) {
   forecastHtml = forecastHtml +
- `<div class="col-2 item">
- <div class="card" style="width: 5rem;">
+ `<div class="col item">
+ <div class="col card">
    <div class="card-body">
      <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
      <img class = "forecast-icon" alt="forecast icon" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}.png">
@@ -91,13 +91,13 @@ function showTemperature(response) {
     icon.addEventListener('click',(e) => {
       if (e.target === iconCels) {
         temp.innerHTML = tempNow;
-        iconCels.classList.add("active");
-        iconFareng.classList.remove("active");
+        iconCels.classList.add("active-link");
+        iconFareng.classList.remove("active-link");
       }
       if (e.target ===iconFareng) {
         temp.innerHTML = Math.round(tempNow*1.8+32);
-        iconFareng.classList.add("active");
-        iconCels.classList.remove("active");
+        iconFareng.classList.add("active-link");
+        iconCels.classList.remove("active-link");
 
       }
     })
@@ -134,6 +134,21 @@ currentBtn.addEventListener('click',(e)=> {
   navigator.geolocation.getCurrentPosition(handlePosition)
 })
 
+let links = document.querySelectorAll(".nav-link");
+
+links.forEach(link=> {
+  
+  link.addEventListener("click",() => {
+    links.forEach(link=> {
+      link.classList.remove("active");
+    });
+    city = link.innerHTML;
+   link.classList.add("active");
+    searchCity(city);
+    
+  })
+  
+})
 
 
 

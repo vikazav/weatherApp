@@ -59,11 +59,10 @@
 .temp-icon:hover {
    text-decoration: underline;
 }
-.active {
+.active-link {
    color:black;
-   
 }
-.active:hover {
+.active-link:hover {
 text-decoration: none;
 cursor:default;
 }
